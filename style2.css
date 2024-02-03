@@ -1,0 +1,644 @@
+* {
+    
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.imagenPrincipal {
+
+    height: 900px;
+    background-image: url('https://etapybudowy.pl/wp-content/uploads/2022/09/modern-living-room-interior-with-sofa-green-plants-lamp-table-dark-wall-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: sticky;
+}
+
+@keyframes cambio-color {
+
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: rgb(198, 176, 51);
+    }
+
+    100% {
+
+        color: rgb(198, 176, 51);
+    }
+}
+
+
+.navegacion {
+
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15px;
+    box-sizing: border-box;
+    width: 1000px;
+    text-align: center;
+
+
+
+}
+
+
+.item {
+    position: relative;
+    display: inline-block;
+    padding: 30px;
+    margin-right: 90px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
+    transition: transform 1s ease-in-out;
+    transition: filter 0.3s ease-in-out;
+
+}
+
+.item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.link {
+
+    position: relative;
+    padding: 10px;
+}
+
+.link:after {
+    content: "";
+    width: 2px;
+    height: 3px;
+    background-color: rgb(198, 176, 51);
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transition: all .5s;
+    will-change: width;
+}
+
+.link:hover:after {
+    width: 100%;
+    right: 0;
+
+
+
+}
+
+.navegacion .item:hover {
+
+    transform: scale(1.1);
+}
+
+
+
+
+.navegacion:not(:hover) {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+
+.navegacion:hover .item:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+    transition: filter 0.3s ease-in-out;
+}
+
+
+@keyframes mover {
+
+    0% {
+        transform: translateX(-50%);
+    }
+
+    50% {
+        transform: translateX(50%);
+
+    }
+
+    100% {
+
+        transform: translateX();
+
+
+
+    }
+
+}
+
+
+
+.titulo-inicial {
+
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 80px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 150px;
+    animation: mover 7.5s ease-in-out;
+
+
+}
+
+.titulo-inicial1 {
+
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 190px;
+    animation: cambio-color 6.5s forwards;
+
+}
+
+@keyframes desvanecer {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.btn-container {
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60%;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.7s ease-in-out;
+    animation: desvanecer 2.8s ease-in-out;
+
+
+
+}
+
+
+.btn-container:hover {
+
+
+    transform: scale(1) translate(-50%, -50%);
+    background: rgb(198, 176, 51);
+    color: white;
+
+
+
+}
+
+.btn-container:hover .btn-show {
+    color: white;
+}
+
+.btn-principal {
+
+
+    border: none;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+
+
+}
+
+
+.imagen-secundaria {
+
+    height: 800px;
+    background-image: url('https://image.freepik.com/photos-gratuite/salon-vide-canape-bleu-plantes-table-fond-mur-blanc-vide-rendu-3d_41470-1782.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: sticky;
+}
+
+.imagen-secundaria {
+    position: relative;
+}
+
+@keyframes estilo {
+
+
+    0% {
+
+        letter-spacing: 0.6em;
+        opacity: 0;
+
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+.titulo-productos {
+
+
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    left: 10%;
+    top: 50px;
+    font-size: 60px;
+    animation: estilo 1.5s linear both;
+
+}
+
+.bloque-images1 {
+
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    left: 10%;
+    transform: translateX(-10%);
+    top: 230px;
+    gap: 140px;
+
+
+}
+
+.elemento {
+
+    width: 100px;
+
+
+}
+
+.bloque-texto {
+
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 20%;
+    transform: translateX(-20%);
+    top: 390px;
+
+
+
+}
+
+.texto1 {
+
+    margin: 0 160px 0 0;
+
+}
+
+
+#calidad::after,
+#calidad::before {
+
+
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: rgb(198, 176, 51);
+    top: 0.6em;
+
+
+}
+
+#calidad::before {
+
+    left: 80px;
+
+
+
+}
+
+#calidad::after {
+
+    left: 290px;
+
+
+
+}
+
+.texto-cat {
+
+    position: relative;
+    top: 390px;
+    left: 60px;
+    margin: 20px auto;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 190ch;
+    animation: typing 4s steps(200), blink .5s infinite step-end alternate;
+    overflow: hidden;
+
+
+}
+
+
+
+@keyframes typing {
+
+    from {
+
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+@keyframes blink {
+
+    50% {
+        border-color: transparent
+    }
+}
+
+
+.btn-download {
+
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    overflow: hidden;
+    left: 290px;
+    top: 470px;
+    gap: 40px;
+    padding: 10px;
+    border-radius: 10px;
+
+
+}
+
+.button-download,
+.button__icon,
+.btn-texto {
+    transition: all 0.3s;
+}
+
+
+.btn-download .btn-texto {
+
+    transform: translateX(22px);
+    color: black;
+    font-weight: 600;
+}
+
+.button-download .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.icon-btn {
+
+    position: relative;
+    height: 20px;
+    width: 20px;
+
+}
+
+svg {
+    width: 20px;
+    fill: black;
+
+}
+
+.btn-download:hover {
+
+    background: rgb(198, 176, 51);
+    color: white;
+
+
+}
+
+.btn-download:hover .btn-texto {
+    color: transparent;
+}
+
+.btn-download:hover .button__icon {
+    width: 148px;
+    transform: translateX(-50px);
+
+}
+
+.btn-download:hover svg {
+    fill: white;
+}
+
+.btn-download:active {
+
+    background-color: gold;
+}
+
+
+.tercera-seccion {
+
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190628/ourmid/pngtree-wood-floor-wall-panel-background-image_282686.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: sticky;
+    height: 700px;
+}
+
+.carrusel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    position: relative;
+    top: 250px;
+    width: 100%;
+}
+
+.image {
+    flex: 1 0 auto;
+    margin: 0 50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.carrusel::-ms-thumb {
+    background-color: gold;
+    border-radius: 10px;
+}
+
+.carrusel::-ms-track {
+    background-color: gold;
+    /* Color del riel de la barra de desplazamiento */
+}
+
+.tercera-seccion {
+    position: relative;
+}
+
+.titulo-bloque {
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    font-size: 30px;
+    white-space: nowrap;
+    animation: teclear 5s steps(30), blank .5s infinite step-end alternate;
+
+
+
+}
+
+
+.titulo-bloque:before,
+.titulo-bloque:after {
+
+    content: '';
+    top: 0.6em;
+    width: 40px;
+    height: 2px;
+    background-color: rgb(198, 176, 51);
+    position: absolute;
+
+}
+
+.titulo-bloque::before {
+
+    left: -255px;
+    width: 230px;
+
+
+}
+
+.titulo-bloque::after {
+
+    left: 580px;
+    width: 244px;
+
+
+}
+
+@keyframes teclear {
+
+    from {
+
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+}
+
+@keyframes blank {
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.figure {
+    display: grid;
+    grid-template-areas: "img";
+    width: 300px;
+    overflow: hidden;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    --show-caption: 0;
+}
+
+.figure:hover {
+
+    --show-caption: 150%;
+}
+
+.figure img {
+    grid-area: img;
+    width: 100%;
+    border-radius: inherit;
+    box-shadow: 0 0 30px 0 red;
+}
+
+.figure-caption {
+    grid-area: img;
+    border-radius: inherit;
+    display: grid;
+    place-items: center;
+    background-color: aqua;
+
+    transition: clip-path 1s;
+    clip-path: circle(var(--show-caption) at center);
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .imagenPrincipal {
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        position: absolute;
+    }
+
+    .imagenPrincipal{
+
+     width: 100%;
+
+
+    }
+   
+
+
+
+
+
+
+
+}
