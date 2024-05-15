@@ -1,5 +1,5 @@
 * {
-    
+
     padding: 0;
     margin: 0;
     font-family: 'Raleway', sans-serif;
@@ -627,13 +627,27 @@ svg {
         position: absolute;
     }
 
-    .imagenPrincipal{
+    .imagenPrincipal {
 
-     width: 100%;
+        width: 100%;
 
 
     }
-   
+
+    .btn-container {
+
+        position: absolute;
+        top: 40%;
+        width: 30%;
+    }
+
+    .titulo-productos {
+
+        position: relative;
+        left: 15%;
+
+    }
+
 
 
 
